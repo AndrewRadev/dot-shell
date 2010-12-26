@@ -1,6 +1,5 @@
 # Use vim as a man viewer
 function vimman() { vim -R -c "Man $1 $2" -c "bdelete 1"; }
-alias man=vimman
 
 # Extract Stuff
 extract () {
