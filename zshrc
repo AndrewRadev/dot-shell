@@ -1,15 +1,11 @@
-source ~/.shell/shared/functions.sh
-source ~/.shell/shared/aliases.sh
-source ~/.shell/shared/path.sh
-
-source ~/.shell/zsh/functions.zsh
-source ~/.shell/zsh/options.zsh
-source ~/.shell/zsh/completion.zsh
-source ~/.shell/zsh/keys.zsh
-source ~/.shell/zsh/prompt.zsh
-source ~/.shell/zsh/ssh-agent.zsh
-
-[[ -s ~/.shell/local_shared ]] && source ~/.shell/local_shared
+source ~/.shell/lib/path.zsh
+source ~/.shell/lib/functions.zsh
+source ~/.shell/lib/aliases.zsh
+source ~/.shell/lib/options.zsh
+source ~/.shell/lib/completion.zsh
+source ~/.shell/lib/keys.zsh
+source ~/.shell/lib/prompt.zsh
+source ~/.shell/lib/ssh-agent.zsh
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 return 0

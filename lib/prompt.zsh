@@ -9,5 +9,5 @@ function maybe_shell_depth() {
   fi
 }
 
-export PROMPT="$(maybe_shell_depth)%M %{${fg[yellow]}%}%#%{$reset_color%} "
+export PROMPT="$(maybe_shell_depth)%M %{${fg[green]}%}%#%{$reset_color%} "
 export RPROMPT="%{${fg[green]}%}%~%{$reset_color%}"
