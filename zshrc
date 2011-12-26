@@ -7,5 +7,8 @@ source ~/.shell/lib/keys.zsh
 source ~/.shell/lib/prompt.zsh
 source ~/.shell/lib/ssh-agent.zsh
 
+export EDITOR=vim
+export TERM=xterm-color
+
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 return 0

@@ -1,3 +1,5 @@
+autoload colors; colors;
+
 # Do nothing
 function nop() { }
 
@@ -24,4 +26,24 @@ extract () {
   else
     echo "'$1' is not a valid file"
   fi
+}
+
+# get the name of the branch we are on
+function git_prompt_info() {
+  if [[ -d .git ]];
+  then
+    ref=$(cat .git/HEAD)
+    echo "$fg[blue](${ref#ref: refs/heads/})$fg[reset]"
+  elif [[ -f .git ]]
+  then
+    gitdir=$(cat .git)
+    gitdir=${gitdir#gitdir: }
+    ref=$(cat $gitdir/HEAD)
+    echo "$fg[blue](${ref#ref: refs/heads/})$fg[reset]"
+  fi
+}
+
+function vi_mode_prompt_info() {
+  MODE_INDICATOR="%{$fg_bold[red]%}<<<%{$reset_color%}"
+  echo "${${KEYMAP/vicmd/$MODE_INDICATOR}/(main|viins)/}"
 }

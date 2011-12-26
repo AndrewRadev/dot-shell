@@ -2,36 +2,20 @@ alias sudo='sudo -E'
 alias man=vimman
 
 alias ls='ls -h --color=always --group-directories-first'
-alias lss='ls -1'
 alias lsl='ls -l'
-alias lsa='ls -a'
-alias lsal='ls -al'
 
 alias cal='cal -m'
 
 alias cdu='cdu -idh'
 alias cdf='cdf -h'
 
-alias snes='snes9x -r 7 -y3'
 alias gvim='gvim -geometry 999x999'
-alias clive='clive --format=best'
-
-alias e=vim
-alias u='cd ..'
-
-alias ffeh='feh -F'
 
 alias vimfiles='vim -c "Proj vimfiles"'
-alias clip='vim +ClipBrd +only'
 alias vrename='vim +Rename'
+alias weather='weather -i LBSF'
 
-alias vim-white='vim -c "colo thegoodluck"'
-alias sf='php symfony --color'
-
-alias svn-missing="svn status | grep ^! | cut -d' ' -f8"
-alias svn-unknown="svn status | grep ^? | cut -d' ' -f8"
-
-alias rm-svn='rm -rf `find . -type d -name .svn`'
+alias ree="RUBY_HEAP_MIN_SLOTS=1000000 RUBY_HEAP_SLOTS_INCREMENT=1000000 RUBY_HEAP_SLOTS_GROWTH_FACTOR=1 RUBY_GC_MALLOC_LIMIT=1000000000 RUBY_HEAP_FREE_MIN=500000"
 
 alias g='git'
 alias gst='git status'
@@ -40,6 +24,9 @@ alias gca='git commit -av'
 alias gdv='git diff -w "$@" | vim -R -'
 alias gp='git push'
 alias gl='git pull'
+alias glog='git log --oneline --graph --decorate --branches=\* --abbrev-commit'
+alias gr10='git rebase -i HEAD~10'
+alias gr5='git rebase -i HEAD~5'
 
-alias git-deleted="git status --short | grep D  | cut -b4-"
-alias git-unknown="git status --short | grep ?? | cut -b4-"
+alias be="bundle exec"
+alias bo="bundle open"

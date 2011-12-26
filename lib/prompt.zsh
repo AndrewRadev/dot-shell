@@ -1,13 +1,14 @@
-setopt prompt_subst
-autoload colors; colors;
-
-function maybe_shell_depth() {
-  if [[ $SHLVL -gt 1 ]] ; then
-    echo "%{${fg[red]}%}+%{$reset_color%} ";
-  else
-    echo '';
-  fi
+function zle-line-init zle-keymap-select {
+  zle reset-prompt
 }
+zle -N zle-line-init
+zle -N zle-keymap-select
 
-export PROMPT="$(maybe_shell_depth)%M %{${fg[green]}%}%#%{$reset_color%} "
-export RPROMPT="%{${fg[green]}%}%~%{$reset_color%}"
+setopt prompt_subst
+
+export PROMPT='%M$SHELL_DEPTH $(git_prompt_info)%{$fg[yellow]%}%(?.%{$fg[green]%}.%{$fg[red]%})%#%{$reset_color%} '
+export RPROMPT='$(vi_mode_prompt_info)%{$fg[green]%}%~%{$reset_color%}'
+
+if [[ $SHLVL -gt 1 ]] ; then
+  SHELL_DEPTH="%{${fg[red]}%}+%{$reset_color%}";
+fi
