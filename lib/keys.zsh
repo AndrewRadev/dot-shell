@@ -11,6 +11,8 @@ bindkey -M viins '^[[B' history-beginning-search-forward
 bindkey -M vicmd 'k' history-beginning-search-backward
 bindkey -M vicmd 'j' history-beginning-search-forward
 
+bindkey '^[[Z' reverse-menu-complete
+
 # vi-backward-delete-char is stupid
 bindkey -M viins '^?' backward-delete-char
 
