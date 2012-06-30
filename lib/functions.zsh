@@ -33,13 +33,13 @@ function git_prompt_info() {
   if [[ -d .git ]];
   then
     ref=$(cat .git/HEAD)
-    echo "$fg[blue](${ref#ref: refs/heads/})$fg[reset]"
+    echo "%{$fg[blue]%}(${ref#ref: refs/heads/})%{$fg[reset]%}"
   elif [[ -f .git ]]
   then
     gitdir=$(cat .git)
     gitdir=${gitdir#gitdir: }
     ref=$(cat $gitdir/HEAD)
-    echo "$fg[blue](${ref#ref: refs/heads/})$fg[reset]"
+    echo "%{$fg[blue]%}(${ref#ref: refs/heads/})%{$fg[reset]%}"
   fi
 }
 
