@@ -33,3 +33,4 @@ alias be="bundle exec"
 alias bo="bundle open"
 
 alias Exit=exit
+alias xit=exit
