@@ -9,6 +9,6 @@ setopt prompt_subst
 export PROMPT='%M$SHELL_DEPTH $(git_prompt_info)%{$fg[yellow]%}%(?.%{$fg[green]%}.%{$fg[red]%})%#%{$reset_color%} '
 export RPROMPT='$(vi_mode_prompt_info)%{$fg[green]%}%~%{$reset_color%}'
 
-if [[ $SHLVL -gt 3 ]] ; then
+if [[ $SHLVL -gt 1 ]] ; then
   SHELL_DEPTH="%{${fg[red]}%}+%{$reset_color%}";
 fi
