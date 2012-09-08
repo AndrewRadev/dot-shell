@@ -31,6 +31,7 @@ alias gr5='git rebase -i HEAD~5'
 
 alias be="bundle exec"
 alias bo="bundle open"
+alias befs="bundle exec foreman start"
 
 alias Exit=exit
 alias xit=exit
