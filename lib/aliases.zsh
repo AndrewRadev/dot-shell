@@ -25,7 +25,7 @@ alias gca='git commit -av'
 alias gdv='git diff -w "$@" | vim -R -'
 alias gp='git push'
 alias gl='git pull'
-alias glog='git log --oneline --graph --decorate --branches=\* --abbrev-commit'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gr10='git rebase -i HEAD~10'
 alias gr5='git rebase -i HEAD~5'
 
