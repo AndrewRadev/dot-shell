@@ -47,3 +47,7 @@ function vi_mode_prompt_info() {
   MODE_INDICATOR="%{$fg_bold[red]%}<<<%{$reset_color%}"
   echo "${${KEYMAP/vicmd/$MODE_INDICATOR}/(main|viins)/}"
 }
+
+function fliptable() {
+  echo "（╯°□°）╯︵ ┻━┻";
+}
