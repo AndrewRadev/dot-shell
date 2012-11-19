@@ -6,7 +6,7 @@ alias lsl='ls -l'
 
 alias cal='cal -m'
 
-alias cdu='cdu -idh'
+alias cdu='cdu -dh -M1'
 alias cdf='cdf -h'
 
 alias gvim='gvim -geometry 999x999'
