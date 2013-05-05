@@ -29,7 +29,7 @@ zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path ~/.shell/cache/
 
 _vimproj_completion() {
-    reply=(`sed -e '/[\w+]/D' -e '/^\s*$/d' -e 's/\[//' -e 's/]//' .vimproj | uniq | sort`)
+    reply=(`sed -e '/[\w+]/D' -e '/^\s*$/d' -e 's/\[//' -e 's/]//' ~/.vimproj | uniq | sort`)
 }
 compctl -K _vimproj_completion vimproj
 
