@@ -9,8 +9,3 @@ source ~/.shell/lib/ssh-agent.zsh
 
 export EDITOR=vim
 export TERM=xterm-color
-
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-return 0
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
