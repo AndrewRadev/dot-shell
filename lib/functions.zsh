@@ -29,6 +29,7 @@ extract () {
 }
 
 # get the name of the branch we are on
+# Note: currently not used, __git_ps1 used instead.
 function git_prompt_info() {
   if [[ -d .git ]];
   then
