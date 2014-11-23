@@ -34,3 +34,4 @@ alias befs="bundle exec foreman start"
 
 alias Exit=exit
 alias xit=exit
+alias -g raisl=rails
