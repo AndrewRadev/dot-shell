@@ -9,3 +9,4 @@ source ~/.shell/lib/ssh-agent.zsh
 
 export EDITOR=vim
 export TERM=xterm-color
+export MANPAGER="env MAN_PN=1 vim -M +MANPAGER -"

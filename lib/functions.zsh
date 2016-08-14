@@ -3,9 +3,6 @@ autoload colors; colors;
 # Do nothing
 function nop() { }
 
-# Use vim as a man viewer
-function vimman() { vim -R -c "Man $1 $2" -c "bdelete 1"; }
-
 # Extract Stuff
 extract () {
   if [ -f $1 ]; then
