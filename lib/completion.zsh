@@ -28,13 +28,6 @@ zstyle ':completion:*:hosts' hosts $hosts
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path ~/.shell/cache/
 
-_proj_completion() {
-  reply=(`{ sed -n -e '/^\[/p' -e '/^\s*$/d' ~/.vimproj | sed -e 's/\[//' -e 's/]//'; /bin/ls ~/projects } | cat | sort | uniq`)
-}
-compctl -K _proj_completion proj
-compctl -K _proj_completion vimproj
-compctl -K _proj_completion runproj
-
 expand-or-complete-with-dots() {
   echo -n "\e[31m......\e[0m"
   zle expand-or-complete
