@@ -49,3 +49,7 @@ function vi_mode_prompt_info() {
 function fliptable() {
   echo "（╯°□°）╯︵ ┻━┻";
 }
+
+function keep-track() {
+  fg && ding && notify-send --icon=/usr/share/icons/gnome/48x48/status/gtk-dialog-info.png "Keep-track: Done"
+}
