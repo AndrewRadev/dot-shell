@@ -51,5 +51,10 @@ function fliptable() {
 }
 
 function keep-track() {
-  fg && ding && notify-send --icon=/usr/share/icons/gnome/48x48/status/gtk-dialog-info.png "Keep-track: Done"
+  last_command=$(history | tail -1 | cut -d' ' -f3-)
+
+  fg && ding && \
+    notify-send \
+    --icon=/usr/share/icons/gnome/48x48/status/gtk-dialog-info.png \
+    "keep-track" "Done: $last_command"
 }
