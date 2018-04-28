@@ -10,7 +10,4 @@ export PATH=/usr/lib/ccache/bin:$PATH
 
 # home bin exported before everything for overrides
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
 export PYTHONPATH=$PYTHONPATH:$HOME/projects
