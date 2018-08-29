@@ -50,6 +50,10 @@ function fliptable() {
   echo "（╯°□°）╯︵ ┻━┻";
 }
 
+function facepalm() {
+  echo "(－‸ლ)";
+}
+
 function keep-track() {
   last_command=$(history | tail -1 | cut -d' ' -f3-)
 
