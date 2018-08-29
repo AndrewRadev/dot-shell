@@ -56,9 +56,13 @@ function facepalm() {
 
 function keep-track() {
   last_command=$(history | tail -1 | cut -d' ' -f3-)
+  pid=$(jobs -p | sed 's/.*+\s*\([0-9]\+\) suspended.*/\1/' | head -1)
+  start_time=$(date --date="$(ps -p $pid -o lstart | tail -1)" +%s)
+
+  echo "Keeping track of: $pid"
 
   fg && ding && \
     notify-send \
     --icon=/usr/share/icons/gnome/48x48/status/gtk-dialog-info.png \
-    "keep-track" "Done: $last_command"
+    "keep-track" "Done: $last_command, Time: $(expr $(date +%s) - $start_time)s, PID was: $pid"
 }
