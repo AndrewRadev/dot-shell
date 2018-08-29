@@ -54,6 +54,13 @@ function facepalm() {
   echo "(－‸ლ)";
 }
 
+# Given a long-running process in the terminal:
+#
+#  - Ctrl+Z to suspend it
+#  - Run `keep-track`
+#  - Output resumes, when done will show a notification with the time it took
+#    for the process to run
+#
 function keep-track() {
   last_command=$(history | tail -1 | cut -d' ' -f3-)
   pid=$(jobs -p | sed 's/.*+\s*\([0-9]\+\) suspended.*/\1/' | head -1)
