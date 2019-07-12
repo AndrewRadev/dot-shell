@@ -69,6 +69,7 @@ function keep-track() {
   echo "Keeping track of: $pid"
 
   fg && ding && \
+    echo "Done: $last_command, Time: $(expr $(date +%s) - $start_time)s, PID was: $pid" && \
     notify-send \
     --icon=/usr/share/icons/gnome/48x48/status/gtk-dialog-info.png \
     "keep-track" "Done: $last_command, Time: $(expr $(date +%s) - $start_time)s, PID was: $pid"
