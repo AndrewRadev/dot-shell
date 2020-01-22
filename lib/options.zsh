@@ -12,9 +12,6 @@ setopt hist_ignore_space
 setopt auto_pushd
 setopt pushd_ignore_dups
 
-# Prompts for confirmation after 'rm *'
-setopt rm_star_wait
-
 # Background processes aren't killed on exit of shell
 setopt auto_continue
 setopt no_hup
