@@ -74,3 +74,11 @@ function keep-track() {
     --icon=/usr/share/icons/gnome/48x48/status/gtk-dialog-info.png \
     "keep-track" "Done: $last_command, Time: $(expr $(date +%s) - $start_time)s, PID was: $pid"
 }
+
+# Create a horizontal line. Given argument is the character to repeat.
+#
+# Taken from: https://twitter.com/climagic/status/1244685325450055682
+#
+hr() {
+  printf '%0*d' $(tput cols) | tr 0 ${1:-_};
+}
